@@ -60,6 +60,7 @@ export async function planInstall(ctx, command = 'init') {
   const scope = options.scope || oldProject.scope || 'user';
   const agents = options.agents || oldProject.agents || oldUser.agents || ['codex'];
   const integrateProject = command === 'init' || (command === 'upgrade' && Boolean(oldProject.rule));
+  if (integrateProject && (roots.project === ctx.home || path.dirname(roots.project) === roots.project)) throw new KitError('PROJECT_REQUIRED', '请进入具体项目目录或传入项目路径，不能把用户主目录或文件系统根目录整体接入。仅安装用户级技能请用install。');
   if (!['user','project'].includes(scope)) throw new KitError('INVALID_ARGUMENT', 'scope应为user或project');
   if (!agents.length || agents.some(a => !['codex','claude'].includes(a)) || new Set(agents).size !== agents.length) throw new KitError('INVALID_ARGUMENT', 'agents只能选择codex,claude且不能重复');
   if (oldProject.kitVersion && command !== 'install' && (scope !== oldProject.scope || json(agents) !== json(oldProject.agents))) throw new KitError('MIGRATION_REQUIRED', '更换已有项目的安装范围或Agent集合需要单独迁移，请先讨论旧目录的保留方式。');

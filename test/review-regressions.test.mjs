@@ -55,3 +55,8 @@ test('project-scope Claude setup ignores an unrelated user Codex link',async t=>
  const f=await fixture(t,{scope:'project',agents:['claude']});const outside=path.join(f.base,'unused');await fs.mkdir(outside);await fs.symlink(outside,path.join(f.home,'.codex'),process.platform==='win32'?'junction':'dir');
  const ctx=await context({...f.ctx.options});assert.equal((await execute(ctx,'init')).status,'INSTALLED');assert.deepEqual(await fs.readdir(outside),[]);assert.equal((await doctor(ctx)).status,'PASS');
 });
+
+test('accidental init at user home is refused while install-only remains available',async t=>{
+ const f=await fixture(t);const ctx=await context({project:f.home,home:f.home});const before=await hashes(f.home);
+ await assert.rejects(execute(ctx,'init'),e=>e.code==='PROJECT_REQUIRED');assert.deepEqual(await hashes(f.home),before);assert.equal((await execute(ctx,'install')).status,'INSTALLED');
+});
