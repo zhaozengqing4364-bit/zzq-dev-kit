@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenSpec ZZQ · 复盘改进"
+  short_description: "复盘改进：按当前OpenSpec变更接续，保留已确认决定、实际证据与任务边界"
+  default_prompt: "使用 $openspec-retro-zzq，复盘这次工作，找出有证据的重复成本和最值得改进的规则或工具。"

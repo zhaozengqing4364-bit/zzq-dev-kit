@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenSpec ZZQ · 一次性原型"
+  short_description: "一次性原型：按当前OpenSpec变更接续，保留已确认决定、实际证据与任务边界"
+  default_prompt: "使用 $openspec-prototype-zzq，为这个设计问题制作一个隔离的小原型，验证关键现象并记录结论和限制。"

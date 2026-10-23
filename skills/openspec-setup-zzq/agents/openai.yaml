@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenSpec ZZQ · 项目接入"
+  short_description: "接入新老项目，保留已有规则，核对实际环境、技能、规格与验证入口"
+  default_prompt: "使用 $openspec-setup-zzq 将当前项目接入ZZQ开发体系，保留原有约定并完成必要检查。"

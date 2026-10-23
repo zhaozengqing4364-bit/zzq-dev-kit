@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenSpec ZZQ · 规格同步与归档"
+  short_description: "规格同步与归档：按当前OpenSpec变更接续，保留已确认决定、实际证据与任务边界"
+  default_prompt: "使用 $openspec-archive-zzq，核对当前变更的任务与证据，按我指定的范围同步规格或归档。"

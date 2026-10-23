@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenSpec ZZQ · 问题诊断"
+  short_description: "问题诊断：按当前OpenSpec变更接续，保留已确认决定、实际证据与任务边界"
+  default_prompt: "使用 $openspec-debug-zzq，查清这个问题的触发条件和原因，按当前授权处理，并保留原失败证据。"

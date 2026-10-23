@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenSpec ZZQ · 工作交接"
+  short_description: "工作交接：按当前OpenSpec变更接续，保留已确认决定、实际证据与任务边界"
+  default_prompt: "使用 $openspec-handoff-zzq，整理当前工作的接续材料，让下一次会话能从真实进度继续。"

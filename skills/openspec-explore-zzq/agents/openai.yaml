@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenSpec ZZQ · 调查研究"
+  short_description: "调查研究：按当前OpenSpec变更接续，保留已确认决定、实际证据与任务边界"
+  default_prompt: "使用 $openspec-explore-zzq，调查这个问题，核对事实与来源，给结论和待决项；本次不制作原型。"

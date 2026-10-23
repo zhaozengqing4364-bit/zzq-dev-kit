@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenSpec ZZQ · 实施开发"
+  short_description: "实施开发：按当前OpenSpec变更接续，保留已确认决定、实际证据与任务边界"
+  default_prompt: "使用 $openspec-apply-zzq，按当前OpenSpec方案完成实施和必要验证，保留原失败及未验边界。"

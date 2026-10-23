@@ -1,0 +1,23 @@
+{
+  "name": "zzq-dev-kit",
+  "version": "1.0.0",
+  "description": "Portable OpenSpec onboarding with eleven ZZQ skills, conflict-safe installation and recovery",
+  "type": "module",
+  "bin": { "zzq-dev-kit": "bin/zzq-dev-kit.mjs" },
+  "engines": { "node": ">=22.14.0" },
+  "files": ["bin/", "src/", "skills/", "README.md", "LICENSE", "NOTICE.md"],
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "check": "node scripts/check-package.mjs",
+    "test:pack": "node scripts/test-pack.mjs",
+    "prepack": "npm run check"
+  },
+  "dependencies": { "@fission-ai/openspec": "1.14.2", "yaml": "2.8.3" },
+  "repository": { "type": "git", "url": "git+https://github.com/zhaozengqing4364-bit/zzq-dev-kit.git" },
+  "homepage": "https://github.com/zhaozengqing4364-bit/zzq-dev-kit#readme",
+  "bugs": { "url": "https://github.com/zhaozengqing4364-bit/zzq-dev-kit/issues" },
+  "author": "zzq",
+  "license": "MIT",
+  "keywords": ["openspec", "codex", "claude", "agent-skills", "onboarding"],
+  "publishConfig": { "access": "public", "registry": "https://registry.npmjs.org/" }
+}

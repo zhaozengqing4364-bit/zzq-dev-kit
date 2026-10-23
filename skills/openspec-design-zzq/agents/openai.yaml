@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenSpec ZZQ · 方案设计"
+  short_description: "方案设计：按当前OpenSpec变更接续，保留已确认决定、实际证据与任务边界"
+  default_prompt: "使用 $openspec-design-zzq，把这个方向整理成当前OpenSpec所需的可实施方案，复用已确认决定。"

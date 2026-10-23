@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenSpec ZZQ · 规格与质量审查"
+  short_description: "规格与质量审查：按当前OpenSpec变更接续，保留已确认决定、实际证据与任务边界"
+  default_prompt: "使用 $openspec-review-zzq，审查当前改动，分别核对规格与用户结果、工程质量，并说明证据和未验项。"

@@ -1,0 +1,178 @@
+{
+  "bundle_version": "2.1.0",
+  "schema": "Read the current project configuration and actual change schema; no bundled project schema.",
+  "skills": [
+    {
+      "name": "openspec-grill-with-docs-zzq",
+      "title": "需求澄清",
+      "description": "围绕计划或功能进行深入澄清并随讨论记录决定；用于用户想把需求、政策与边界想清楚。"
+    },
+    {
+      "name": "openspec-explore-zzq",
+      "title": "调查研究",
+      "description": "调查现有行为、研究一手资料、分析方案或大任务决策依赖；只调查研究，不创建或运行原型。"
+    },
+    {
+      "name": "openspec-prototype-zzq",
+      "title": "一次性原型",
+      "description": "在用户明确要求原型或小实验时，用隔离代码验证具体设计问题；记录结论，不自动进入生产实现。"
+    },
+    {
+      "name": "openspec-design-zzq",
+      "title": "方案设计",
+      "description": "创建、继续或修订OpenSpec规划，将明确方向形成业务、交互、工程、验收与任务切片；单独调用止于设计。"
+    },
+    {
+      "name": "openspec-apply-zzq",
+      "title": "实施开发",
+      "description": "按已有OpenSpec任务实施或继续开发，补必要规划、处理普通错误并验证完整用户结果；按实际证据更新进度。"
+    },
+    {
+      "name": "openspec-review-zzq",
+      "title": "规格与质量审查",
+      "description": "审查方案、代码改动或用户流程，对照OpenSpec规格与工程约定核对结果和证据；默认只读，区分缺陷与未验。"
+    },
+    {
+      "name": "openspec-debug-zzq",
+      "title": "问题诊断",
+      "description": "分类原始反馈，复现并诊断Bug或性能回退；只诊断时交原因与建议，已授权修复时完成定向修复和复验。"
+    },
+    {
+      "name": "openspec-retro-zzq",
+      "title": "复盘改进",
+      "description": "围绕已完成或暂停的工作及真实返工做复盘，定位规则、导航、文档或工具的改进点；按授权修正相关材料。"
+    },
+    {
+      "name": "openspec-handoff-zzq",
+      "title": "工作交接",
+      "description": "将长会话或暂停工作整理为可继续的OpenSpec接续材料，明确原始证据、待办和边界；必要时给人工作业向导。"
+    },
+    {
+      "name": "openspec-archive-zzq",
+      "title": "规格同步与归档",
+      "description": "按明确请求同步OpenSpec正式规格，或归档选定的单个/多个变更；检查任务、语义冲突、目标碰撞及部分结果。"
+    }
+  ],
+  "methods": [
+    {
+      "name": "grill-with-docs",
+      "route": "openspec-grill-with-docs-zzq",
+      "trigger": "设计含重要未决选择，需边讨论边记录",
+      "reference": "shaping-methods.md",
+      "artifact": "当前调查或需求产物问题；所属范围/设计/规格产物中的决定"
+    },
+    {
+      "name": "grill-me",
+      "route": "openspec-grill-with-docs-zzq",
+      "trigger": "用户明确要求深入追问",
+      "reference": "shaping-methods.md",
+      "artifact": "当前change的待决项与决定"
+    },
+    {
+      "name": "grilling",
+      "route": "openspec-grill-with-docs-zzq",
+      "trigger": "多个决定存在依赖，按前置条件提问",
+      "reference": "shaping-methods.md",
+      "artifact": "当前调查或需求产物依赖与决定指针"
+    },
+    {
+      "name": "wayfinder",
+      "route": "openspec-explore-zzq",
+      "trigger": "跨会话大任务，路径尚不清楚",
+      "reference": "shaping-methods.md",
+      "artifact": "当前调查或需求产物中的轻量决策地图"
+    },
+    {
+      "name": "prototype",
+      "route": "openspec-prototype-zzq",
+      "trigger": "用户明确要求用隔离原型或小实验回答设计问题",
+      "reference": "../../openspec-prototype-zzq/SKILL.md",
+      "artifact": "隔离证据附件；正式结论回实际设计/验证依据位置"
+    },
+    {
+      "name": "research",
+      "route": "openspec-explore-zzq",
+      "trigger": "关键事实需查官方文档或第一方资料",
+      "reference": "shaping-methods.md",
+      "artifact": "当前调查或需求产物/实际设计产物结论及来源引用"
+    },
+    {
+      "name": "domain-modeling",
+      "route": "openspec-design-zzq",
+      "trigger": "术语、关系或状态边界模糊",
+      "reference": "shaping-methods.md",
+      "artifact": "项目既有术语/规格；重要取舍沿项目决策记录"
+    },
+    {
+      "name": "code-review",
+      "route": "openspec-review-zzq",
+      "trigger": "核对本次完整diff和实际证据",
+      "reference": "engineering-feedback.md",
+      "artifact": "当前验收/验证记录中的规格与工程两轴"
+    },
+    {
+      "name": "diagnosing-bugs",
+      "route": "openspec-debug-zzq",
+      "trigger": "难Bug或不明性能回退",
+      "reference": "engineering-feedback.md",
+      "artifact": "原失败、诊断、修复和复验证据"
+    },
+    {
+      "name": "triage",
+      "route": "openspec-debug-zzq",
+      "trigger": "原始反馈需核实分类与范围",
+      "reference": "engineering-feedback.md",
+      "artifact": "当前当前调查或需求产物或既有issue引用"
+    },
+    {
+      "name": "improve-codebase-architecture",
+      "route": "openspec-design-zzq",
+      "trigger": "真实热点出现耦合、导航或测试摩擦",
+      "reference": "engineering-feedback.md",
+      "artifact": "当前调查或需求产物候选、实际设计产物取舍及实际验收安排"
+    },
+    {
+      "name": "codebase-design",
+      "route": "openspec-design-zzq",
+      "trigger": "真实模块接口或可变接缝决策",
+      "reference": "engineering-feedback.md",
+      "artifact": "实际设计产物的职责、接口和验证接缝"
+    },
+    {
+      "name": "retro",
+      "route": "openspec-retro-zzq",
+      "trigger": "用户要求复盘或出现明显重复成本",
+      "reference": "engineering-feedback.md",
+      "artifact": "当前验证记录收尾；获授权后修对应工程入口"
+    },
+    {
+      "name": "wizard",
+      "route": "openspec-handoff-zzq",
+      "trigger": "确有只有用户本人能完成的步骤",
+      "reference": "continuity-and-communication.md",
+      "artifact": "现有交接位置或自有临时向导"
+    },
+    {
+      "name": "handoff",
+      "route": "openspec-handoff-zzq",
+      "trigger": "长会话/压缩/换Agent接续",
+      "reference": "continuity-and-communication.md",
+      "artifact": "当前实际任务产物接续段，必要时临时引用文件"
+    },
+    {
+      "name": "wait-what",
+      "route": "openspec-handoff-zzq",
+      "trigger": "用户没听懂或要求说人话",
+      "reference": "continuity-and-communication.md",
+      "artifact": "简短业务语言回复，不另开流程"
+    },
+    {
+      "name": "writing-for-agents",
+      "route": "openspec-retro-zzq",
+      "trigger": "维护技能、规则和Agent导航材料",
+      "reference": "continuity-and-communication.md",
+      "artifact": "对应已有规则/技能的最小修订"
+    }
+  ],
+  "validated_cli": "1.14.2"
+}
