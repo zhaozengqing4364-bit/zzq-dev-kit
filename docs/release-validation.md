@@ -21,3 +21,5 @@ This file records verification levels rather than claiming universal correctness
 No application UI, provider, deployment or production-data acceptance is implied. Existing/custom Schema support was exercised with bounded examples, not every community Schema. File hashes and tool locks protect the supported local workflow; they are not an OS-level defense against a hostile concurrent process. Recovery is journaled per-file recovery, not a cross-filesystem atomic transaction.
 
 Dependency audit at release preparation reported zero known vulnerabilities. The npm allowlist includes npm-shrinkwrap.json; an earlier pack omitted it and the packed-artifact test now asserts its presence. Superseded CI runs were cancelled; the final six-job run above is complete.
+
+PASS: public GitHub release tarball downloaded through npm exec with a fresh cache; old-project init, repeat no-op, doctor and the generated OpenSpec launcher all passed. The launcher used the documented ZZQ_DEV_KIT_SOURCE release URL because the short npm package name is not published yet.

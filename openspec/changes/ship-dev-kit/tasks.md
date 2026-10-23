@@ -11,3 +11,9 @@
 ## 3. Release
 - [x] 3.1 Document actual commands, limitations, ownership and recovery; inspect the publication file list and license provenance.
 - [ ] 3.2 Publish the source and immutable release artifact, publish npm, and verify the public one-command path.
+
+## Release continuation
+
+- Source repository and GitHub v1.0.0 tarball release are published and publicly smoke-tested.
+- npm login is valid, but the registry rejected publication with E403 requiring two-factor authentication or an authorized token. User account verification is pending; do not claim the short npm command works yet.
+- After publication, verify registry integrity equals the reviewed tarball and repeat public npm init/doctor/launcher in an isolated home, then complete task 3.2.
