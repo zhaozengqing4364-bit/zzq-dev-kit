@@ -2,7 +2,7 @@
 
 一条命令，将新项目或老项目接入 **OpenSpec + 10个ZZQ开发技能 + setup接入流程**。保留项目原有规则，冲突先报告，可检查、可升级、可恢复。
 
-需要 **Node.js >=22.14 和 npm**。支持 Codex、Claude Code；命令可用于 macOS、Linux、Windows。OpenSpec 1.14.2 随包固定，不要求全局安装，也不写入应用的 `package.json`。
+需要 **Node.js >=22.14 和 npm**。支持 Codex、Claude Code；命令可用于 macOS、Linux、Windows。OpenSpec 1.14.2及其依赖树通过npm-shrinkwrap随发布包固定，不要求全局安装，也不写入应用的 `package.json`。
 
 ## 快速开始
 

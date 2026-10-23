@@ -22,5 +22,5 @@ for(const [relative,bytes]of Object.entries(all)){
   if(!all[resolved]||resolved.startsWith('../'))errors.push(`Missing or external reference ${relative}: ${dest}`);
  }
 }
-for(const required of ['README.md','LICENSE','NOTICE.md'])if(!(await fs.stat(path.join(packageRoot,required)).catch(()=>null)))errors.push(`Missing ${required}`);
+for(const required of ['README.md','LICENSE','NOTICE.md','npm-shrinkwrap.json'])if(!(await fs.stat(path.join(packageRoot,required)).catch(()=>null)))errors.push(`Missing ${required}`);
 if(errors.length){console.error(errors.join('\n'));process.exitCode=1;}else console.log(`PASS: ${SKILLS.length} skills, ${Object.keys(all).length} bundled skill files, references and package prerequisites`);
