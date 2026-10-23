@@ -15,6 +15,7 @@ function npm(args,cwd){
 }
 try{
  const pack=JSON.parse(npm(['pack','--ignore-scripts','--json','--pack-destination',base],packageRoot))[0];
+ assert.ok(pack.files.some(f=>f.path==='npm-shrinkwrap.json'),'Published artifact must include its dependency lock');
  const tarball=path.join(base,pack.filename);
  for(const f of pack.files)assert.ok(!/^(test|scripts|openspec|artifacts|node_modules|\.github|\.git)\//.test(f.path),f.path);
  const project=path.join(base,'old project');const home=path.join(base,'user');await fs.mkdir(project);await fs.mkdir(home);
